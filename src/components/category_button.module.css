@@ -1,0 +1,36 @@
+@import "../layouts/variables.css";
+
+.button{
+  display: inline-block;
+  width: 240px;
+  height: 240px;
+  border-radius: 25%;
+  margin: 60px;
+}
+
+.button h2 {
+    text-align: center;
+  padding: 100px 0;
+  line-height: 1;
+}
+
+
+.redButton{
+  composes: button;
+  background-color: red;
+}
+
+.blueButton{
+  composes: button;
+  background-color: blue;
+}
+
+.greenButton{
+  composes: button;
+  background-color: green;
+}
+
+.yellowButton{
+  composes: button;
+  background-color: yellow;
+}

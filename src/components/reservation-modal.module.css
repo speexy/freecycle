@@ -1,0 +1,101 @@
+@import "../layouts/variables.css";
+
+.modalBackground{
+  position: fixed;
+  top:0%;
+  left:0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+}
+
+@media (max-width: 400px){
+  .modalWrapper{
+    height: 100%;
+      overflow-y: scroll;
+  }
+}
+
+.modal{
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 5%;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 40px;
+}
+@media (max-width: 700px){
+  .modal{
+    margin-top: 50px;
+  }
+}
+
+.form{
+  position: relative;
+  width: 80%;
+  margin-left: 40px;
+  padding: 40px 0;
+}
+
+.form div {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.modal p, .form p {
+  padding: 0 5px;
+}
+
+.form input {
+  width: 100%;
+  margin: 5px 0;
+  color: black;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.form textarea {
+  width: 100%;
+  margin: 5px 0;
+  color: black;
+  font-size: 16px;
+  padding: 5px;
+  height: 150px;
+}
+
+.buttonPosition {
+  position: relative;
+  bottom: -60px;
+  right: -23px;
+}
+
+.closeIcon{
+  position: absolute;
+  top: -20px;
+  right:-20px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.closeIcon span {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  display: block;
+  position:absolute;
+  width: 40px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: purple;
+}
+
+.closeIcon span:first-child{
+  transform: rotate(45deg);
+}
+.closeIcon span:last-child{
+  transform: rotate(-45deg);
+}

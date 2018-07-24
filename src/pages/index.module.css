@@ -1,0 +1,6 @@
+@import "../layouts/variables.css";
+
+.categoryWrapper {
+  text-align: center;
+  min-height: calc(100vh - headerHeight - footerHeight);
+}

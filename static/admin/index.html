@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+
+    <!-- Include the styles for the Netlify CMS UI, after your own styles -->
+    <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.2.0/dist/cms.css" />
+
+</head>
+<body>
+<!-- Include the script that builds the page and powers Netlify CMS -->
+<script src="https://unpkg.com/netlify-cms@^1.2.0/dist/cms.js"></script>
+<script>
+    const RelationKitchenSinkPostPreview = createClass({
+        render: function() {
+            // When a post is selected from the relation field, all of it's data
+            // will be available in the metadata nested under the collection name,
+            // and then further nested under the value specified in `valueField`.
+            // In this case, the post would be nested under "posts" and then under
+            // the title of the selected post, since our `valueField` in the config
+            // is "title".
+            const postValue = this.props.entry.getIn(['data', 'blog-de']);
+            const post = this.props.fieldsMetaData.getIn(['blog-de', postValue]);
+            const style = { border: '2px solid #ccc', borderRadius: '8px', padding: '20px' };
+            return post ? h('div', { style: style },
+                h('h2', {}, 'Related Post'),
+                h('h3', {}, post.get('title')),
+                h('img', { src: post.get('image') }),
+                h('p', {}, post.get('body', '').substr(0, 100) + '...'),
+            ) : null;
+        }
+    });
+    CMS.registerWidget("relationKitchenSinkPost", "relation", RelationKitchenSinkPostPreview);
+</script>
+</body>
+</html>

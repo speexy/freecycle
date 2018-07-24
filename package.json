@@ -1,0 +1,28 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "description": "Gatsby hello world starter",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "heroku-postbuild": "gatsby build",
+    "postinstall": "npm rebuild",
+    "postinstall": "cd server && npm install && cd ..",
+    "heroku-postbuild": "`npm bin`/gatsby build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-netlify-cms": "^2.0.1",
+    "gatsby-plugin-sharp": "^1.6.48",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
+    "gatsby-transformer-sharp": "^1.6.26",
+    "netlify-cms": "^1.9.3",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}

@@ -1,0 +1,16 @@
+@import "../layouts/variables.css";
+
+.header{
+  width: 100%;
+  height: headerHeight;
+  background-color: darkPurple;
+  margin: 0 auto;
+}
+
+.header h1 {
+  letter-spacing: 2px;
+  line-height: 1;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+}
